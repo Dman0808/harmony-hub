@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import "modern-normalize/modern-normalize.css";
 import { primaryFont } from "./fonts";
+import bgImg from "@/assets/hero-bg.svg";
 
 export const GlobalStyle = createGlobalStyle`
 :root {
@@ -25,14 +26,22 @@ body {
   scroll-behavior: smooth;
   font-size: 1.6rem;
   background-color: ${({ theme }) => theme.colors.mainBgColor};
-  background-image: linear-gradient( 135deg, ${({ theme }) =>
-    theme.colors.mainBgColorFirst} 10%, ${({ theme }) =>
+  background-image: url(${bgImg}), linear-gradient( 135deg, ${({ theme }) =>
+  theme.colors.mainBgColorFirst} 10%, ${({ theme }) =>
   theme.colors.mainBgColorSecond} 100%);
+  background-repeat: no-repeat;
+  background-position: 85%;
   line-height: 1.5;
   min-height: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media(min-width: 1220px) {
+  background-position: center;
+  background-size: cover;
+  
+  }
 }
 
 p {

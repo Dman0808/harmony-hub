@@ -37,8 +37,6 @@ export const MainContainer = styled.main`
   min-height: 100vh;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 
   width: 100%;

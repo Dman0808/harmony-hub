@@ -5,9 +5,11 @@ export const theme = {
     mainTextColor: "#0c0a09",
     headerTextColor: "#6c757d",
     activeLinkColor: "#000",
-    buttonBgColor: "#4cc9f0",
+    whiteColor: "#fff",
+    buttonBgColor: "#4895ef",
+    buttonHoverBgColor: "#4cc9f0",
     pinkColor: "#f72585",
-    orangeColor: "#ffba08",
+    orangeColor: "#7209b7",
     redColor: "#ff073a",
   },
 };

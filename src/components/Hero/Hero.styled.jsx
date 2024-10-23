@@ -1,8 +1,56 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { primaryFont } from "../fonts";
 import { IoMusicalNote } from "react-icons/io5";
 import { MdOutlineMusicNote } from "react-icons/md";
-import { RiMusicLine } from "react-icons/ri";
+import { RiMusic2Line } from "react-icons/ri";
+
+const noteIconFirst = keyframes`
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(-25deg);
+
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.25) rotate(-35deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-25deg);
+  }
+`;
+
+const noteIconSecond = keyframes`
+  0% {
+    opacity: 1;
+    transform: scale(1);
+
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.25) ;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) ;
+  }
+`;
+
+const noteIconThird = keyframes`
+  0% {
+    opacity: 1;
+    transform: scale(1 rotate(15deg));
+
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.25) rotate(25deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(15deg);
+  }
+`;
 
 export const HeroWrapper = styled.div`
   width: 100%;
@@ -59,15 +107,15 @@ export const MusicNoteIcon = styled(IoMusicalNote)`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.colors.pinkColor};
   transform: rotate(-25deg);
-  opacity: 0;
+  /* opacity: 0; */
 
   transition: opacity var(--primary-transition);
 `;
 
-export const MusicNoteIconSecond = styled(RiMusicLine)`
+export const MusicNoteIconSecond = styled(RiMusic2Line)`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.colors.orangeColor};
-  opacity: 0;
+  /* opacity: 0; */
 
   transition: opacity var(--primary-transition);
 `;
@@ -75,9 +123,10 @@ export const MusicNoteIconSecond = styled(RiMusicLine)`
 export const MusicNoteIconThird = styled(MdOutlineMusicNote)`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.colors.redColor};
-  opacity: 0;
+  /* opacity: 0; */
+  transform: rotate(15deg);
 
-  transition: opacity var(--primary-transition);
+  transition: all var(--primary-transition);
 `;
 
 export const HeroButton = styled.button`
@@ -85,21 +134,32 @@ export const HeroButton = styled.button`
   outline: none;
   border: none;
   padding: 1.2rem 4.8rem;
+  padding-right: 2.4rem;
   border-radius: 1.6rem;
   font-family: ${primaryFont};
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.5;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.mainTextColor};
+  color: ${({ theme }) => theme.colors.whiteColor};
   background-color: ${({ theme }) => theme.colors.buttonBgColor};
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  transition: all var(--primary-transition);
 
   &:hover {
-    ${MusicNoteIcon},${MusicNoteIconSecond},${MusicNoteIconThird} {
-      opacity: 1;
+    background-color: ${({ theme }) => theme.colors.buttonHoverBgColor};
+    color: ${({ theme }) => theme.colors.mainTextColor};
+
+    ${MusicNoteIcon} {
+      animation: ${noteIconFirst} 3s infinite;
+    }
+    ${MusicNoteIconSecond} {
+      animation: ${noteIconSecond} 3s 0.4s infinite;
+    }
+    ${MusicNoteIconThird} {
+      animation: ${noteIconThird} 3s 0.2s infinite;
     }
   }
 `;

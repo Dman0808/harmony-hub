@@ -50,6 +50,26 @@ export const HeaderNavLink = styled(NavLink)`
   line-height: 1.28571;
   transition: all var(--primary-transition);
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    background-color: ${({ theme }) => theme.colors.pinkColor};
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform var(--primary-transition);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
   &:hover {
     color: ${({ theme }) => theme.colors.activeLinkColor};
   }

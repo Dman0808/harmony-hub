@@ -8,14 +8,19 @@ import {
   HeaderNavLink,
   HeaderNavMenu,
   HeaderNavWrapper,
-  HeaderText,
   HeaderWrapper,
 } from "./Header.styled";
 
 function Header() {
   return (
     <HeaderWrapper>
-      <Logo />
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", delay: 0.25 }}
+      >
+        <Logo />
+      </motion.div>
       <HeaderNavWrapper>
         <nav>
           <HeaderNavMenu>
@@ -25,17 +30,14 @@ function Header() {
                   <motion.div
                     initial={{ opacity: 0, y: -100 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ type: "spring", delay: 0.25 }}
+                    transition={{ type: "spring", delay: 0.75 }}
                   >
-                    <HeaderNavLink to={to}>
-                      <HeaderText>{list}</HeaderText>
-                    </HeaderNavLink>
+                    <HeaderNavLink to={to}>{list}</HeaderNavLink>
                   </motion.div>
                 </HeaderItems>
               );
             })}
           </HeaderNavMenu>
-          {/* <MobileHeader /> */}
         </nav>
         <BurgerWrapper>
           <motion.div

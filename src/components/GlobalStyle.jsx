@@ -24,7 +24,10 @@ html {
 body {
   scroll-behavior: smooth;
   font-size: 1.6rem;
-  background-color: ${({ theme }) => theme.colors.mainBgColor}; 
+  background-color: ${({ theme }) => theme.colors.mainBgColor};
+  background-image: linear-gradient( 135deg, ${({ theme }) =>
+    theme.colors.mainBgColorFirst} 10%, ${({ theme }) =>
+  theme.colors.mainBgColorSecond} 100%);
   line-height: 1.5;
   min-height: 100%;
   overflow-x: hidden;

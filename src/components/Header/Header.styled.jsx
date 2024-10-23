@@ -28,25 +28,6 @@ export const HeaderNavMenu = styled.ul`
   }
 `;
 
-// export const HeaderNavLink = styled(NavLink)`
-//   font-family: ${primaryFont};
-//   font-size: 1.6rem;
-//   font-weight: 700;
-//   line-height: 1.5;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   transition: color var(--primary-transition);
-//   color: ${(p) => p.theme.colors.headerTextColorLowOp};
-
-//   &:hover {
-//     color: ${(p) => p.theme.colors.headerTextColor};
-//   }
-
-//   &.active {
-//     color: ${(p) => p.theme.colors.headerTextColor};
-//   }
-// `;
-
 export const HeaderNavWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -100,21 +81,6 @@ export const HeaderItems = styled.li`
   width: 100%;
 `;
 
-export const HeaderIcons = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  color: ${({ theme }) => theme.colors.headerTextColor};
-  transition: all var(--primary-transition);
-  transition-delay: 0.25s;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
 export const HeaderText = styled.span`
   font-size: 1.4rem;
   font-weight: 400;
@@ -123,9 +89,6 @@ export const HeaderText = styled.span`
   line-height: 1.28571;
 
   transition: all var(--primary-transition);
-
-  transform: scale(0);
-  transition-delay: 0s;
 `;
 
 export const HeaderNavLink = styled(NavLink)`
@@ -138,37 +101,12 @@ export const HeaderNavLink = styled(NavLink)`
   position: relative;
 
   border-radius: 50rem;
-  background-color: transparent;
 
   transition: all var(--primary-transition);
-
-  &:hover {
-    transform: scale(1.05);
-    width: 9.2rem;
-    background-color: ${({ theme }) => theme.colors.mainBgColor};
-  }
-
-  &:hover {
-    ${HeaderIcons} {
-      transform: scale(0);
-      transition-delay: 0s;
-    }
-  }
-
-  &:hover {
-    ${HeaderText} {
-      transform: scale(1);
-      transition-delay: 0.25s;
-      color: ${({ theme }) => theme.colors.mainTextColor};
-    }
-  }
 
   &.active {
     background-color: ${({ theme }) => theme.colors.mainBgColor};
 
-    ${HeaderIcons} {
-      color: ${({ theme }) => theme.colors.mainTextColor};
-    }
     ${HeaderText} {
       color: ${({ theme }) => theme.colors.mainTextColor};
     }

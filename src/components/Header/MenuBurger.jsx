@@ -15,7 +15,6 @@ import {
 } from "./MenuBurger.styled";
 import { useMenu } from "../../context/ToggleMenuContext";
 import SocialIcons from "../UI/SocialIcons/SocialIcons";
-import FooterRightsText from "../UI/FooterRightsText/FooterRightsText";
 import menuItems from "../../data/menuLists";
 import { LogoImg } from "../UI/Logo/Logo.styled";
 
@@ -52,8 +51,8 @@ export default function MenuBurger() {
             <LogoImgWrapper>
               <LogoImg
                 src="logo.png"
-                alt="Open Code Chicago official logo"
-                title="Open Code Chicago official logo"
+                alt="Harmony Hub official logo"
+                title="Harmony Hub official logo"
                 width="36px"
                 height="36px"
                 loading="lazy"
@@ -105,19 +104,10 @@ export default function MenuBurger() {
               animate={{ opacity: 1 }}
               transition={{ type: "spring", delay: 0.5 }}
             >
-              <SocialIcons color="#7289d9" />
+              <SocialIcons />
             </motion.div>
           )}
         </BurgerLogoWrapper>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", delay: 1 }}
-          >
-            <FooterRightsText burger />
-          </motion.div>
-        )}
       </BurgerMenuFooterWrapper>
     </Menu>
   );

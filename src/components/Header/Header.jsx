@@ -1,7 +1,9 @@
 import Logo from "../UI/Logo/Logo";
+import MenuLists from "../../data/menuLists";
+import { motion } from "framer-motion";
+import MenuBurgerIcon from "./MenuBurgerIcon";
 import {
   BurgerWrapper,
-  HeaderIcons,
   HeaderItems,
   HeaderNavLink,
   HeaderNavMenu,
@@ -9,10 +11,6 @@ import {
   HeaderText,
   HeaderWrapper,
 } from "./Header.styled";
-import MenuLists from "../../data/menuLists";
-import MemoizedThemeSwitcher from "../UI/ThemeSwitcher/ThemeSwitcher";
-import { motion } from "framer-motion";
-import MenuBurgerIcon from "./MenuBurgerIcon";
 
 function Header() {
   return (
@@ -40,13 +38,6 @@ function Header() {
           {/* <MobileHeader /> */}
         </nav>
         <BurgerWrapper>
-          <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", delay: 1.25 }}
-          >
-            <MemoizedThemeSwitcher />
-          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}

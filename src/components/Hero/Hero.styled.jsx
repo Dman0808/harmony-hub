@@ -69,13 +69,17 @@ export const HeroTitle = styled.h1`
   font-size: 5.2rem;
   line-height: 0.88;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.accentColor};
-  color: #4cc9f0;
+  color: ${({ theme }) => theme.colors.buttonHoverBgColor};
   position: relative;
   white-space: nowrap;
-  text-shadow: 0 0 5px #4cc9f0, 0 0 5px #4cc9f0, 0 0 10px #4cc9f0,
-    0 0 15px #f72585, 0 0 20px #f72585, 0 0 25px #f72585, 0 0 35px #f72585,
-    0 0 40px #f72585;
+  text-shadow: 0 0 5px ${({ theme }) => theme.colors.blueColor},
+    0 0 5px ${({ theme }) => theme.colors.blueColor},
+    0 0 10px ${({ theme }) => theme.colors.blueColor},
+    0 0 15px ${({ theme }) => theme.colors.pinkColor},
+    0 0 20px ${({ theme }) => theme.colors.pinkColor},
+    0 0 25px ${({ theme }) => theme.colors.pinkColor},
+    0 0 35px ${({ theme }) => theme.colors.pinkColor},
+    0 0 40px ${({ theme }) => theme.colors.pinkColor};
 
   &::before {
     content: "Find Your Perfect Harmony";
@@ -83,9 +87,9 @@ export const HeroTitle = styled.h1`
     position: absolute;
     top: 0;
     left: 0;
-    color: rgb(247, 37, 133);
+    color: ${({ theme }) => theme.colors.pinkColor};
     color: transparent;
-    -webkit-text-stroke: 1px #49ff18;
+    -webkit-text-stroke: 1px ${({ theme }) => theme.colors.greenColor};
   }
 `;
 
@@ -114,7 +118,7 @@ export const MusicNoteIcon = styled(IoMusicalNote)`
 
 export const MusicNoteIconSecond = styled(RiMusic2Line)`
   font-size: 2.4rem;
-  color: ${({ theme }) => theme.colors.orangeColor};
+  color: ${({ theme }) => theme.colors.violetColor};
   /* opacity: 0; */
 
   transition: opacity var(--primary-transition);

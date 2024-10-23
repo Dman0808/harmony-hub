@@ -9,7 +9,9 @@ export const theme = {
     buttonBgColor: "#4895ef",
     buttonHoverBgColor: "#4cc9f0",
     pinkColor: "#f72585",
-    orangeColor: "#7209b7",
+    blueColor: "#4cc9f0",
+    violetColor: "#7209b7",
     redColor: "#ff073a",
+    greenColor: "#49ff18",
   },
 };

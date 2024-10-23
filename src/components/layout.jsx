@@ -43,7 +43,6 @@ export const MainContainer = styled.main`
   max-width: 375px;
   position: relative;
   margin: 0 auto;
-  /* padding: 0 1.2rem; */
 
   @media (min-width: 768px) {
     max-width: 768px;

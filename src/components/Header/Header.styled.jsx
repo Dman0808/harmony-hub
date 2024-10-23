@@ -15,7 +15,6 @@ export const HeaderWrapper = styled.header`
   height: 6.4rem;
   z-index: 50;
   max-width: 1440px;
-  background-color: ${(p) => p.theme.colors.headerBg};
 `;
 
 export const HeaderNavMenu = styled.ul`

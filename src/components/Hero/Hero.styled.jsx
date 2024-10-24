@@ -69,28 +69,29 @@ export const HeroTitle = styled.h1`
   font-size: 5.2rem;
   line-height: 0.88;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.buttonHoverBgColor};
-  position: relative;
+  /* color: ${({ theme }) => theme.colors.buttonHoverBgColor}; */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #f72585 0,
+    #7209b7 20%,
+    #ff073a 40%,
+    #fb8500 60%,
+    #ff006e 80%,
+    #4cc9f0 100%
+  );
+  background-size: 100%;
+  -webkit-box-decoration-break: clone;
   white-space: nowrap;
-  text-shadow: 0 0 5px ${({ theme }) => theme.colors.blueColor},
-    0 0 5px ${({ theme }) => theme.colors.blueColor},
-    0 0 10px ${({ theme }) => theme.colors.blueColor},
-    0 0 15px ${({ theme }) => theme.colors.pinkColor},
-    0 0 20px ${({ theme }) => theme.colors.pinkColor},
-    0 0 25px ${({ theme }) => theme.colors.pinkColor},
-    0 0 35px ${({ theme }) => theme.colors.pinkColor},
-    0 0 40px ${({ theme }) => theme.colors.pinkColor};
-
-  &::before {
-    content: "Find Your Perfect Harmony";
-    font-size: 5.2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: ${({ theme }) => theme.colors.pinkColor};
-    color: transparent;
-    -webkit-text-stroke: 1px ${({ theme }) => theme.colors.greenColor};
-  }
+  /* text-shadow: 0 0 1px ${({ theme }) => theme.colors.blueColor},
+    0 0 2px ${({ theme }) => theme.colors.blueColor},
+    0 0 3px ${({ theme }) => theme.colors.blueColor},
+    0 0 4px ${({ theme }) => theme.colors.pinkColor},
+    0 0 5px ${({ theme }) => theme.colors.pinkColor},
+    0 0 6px ${({ theme }) => theme.colors.pinkColor},
+    0 0 7px ${({ theme }) => theme.colors.pinkColor},
+    0 0 8px ${({ theme }) => theme.colors.pinkColor}; */
 `;
 
 export const HeroText = styled.p`

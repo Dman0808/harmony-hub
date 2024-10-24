@@ -1,5 +1,4 @@
 import { useState } from "react";
-import React from "react";
 import Box from "@mui/material/Box";
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -21,6 +20,8 @@ import {
   RegistrationLink,
   BtnLogInSpan,
 } from "./SignIn.styled";
+import { FormWrapper } from "./SignIn.styled";
+import { SignInSignUpBoxStyled } from "./SignIn.styled";
 // import { useDispatch } from "react-redux";
 // import { logIn } from "@/redux/auth/operations";
 
@@ -119,28 +120,14 @@ export default function SignIn() {
       </Helmet>
       <ThemeProvider theme={customTheme}>
         <ContainerStyled>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "1.2rem",
-            }}
-          >
+          <FormWrapper>
             <BoxStyled>
-              <Box
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1.4rem",
-                  position: "relative",
-                }}
-              >
+              <SignInSignUpBoxStyled>
                 <RegistrationLink to="/harmony-hub/signup">
                   Sign Up
                 </RegistrationLink>
                 <TypoTitleStyled variant="h5">Sign In</TypoTitleStyled>
-              </Box>
+              </SignInSignUpBoxStyled>
               <Box
                 component="form"
                 onSubmit={handleSubmit}
@@ -194,7 +181,7 @@ export default function SignIn() {
                 </ButtonStyled>
               </Box>
             </BoxStyled>
-          </div>
+          </FormWrapper>
           <Copyright sx={{ mt: 8, mb: 4 }} />
         </ContainerStyled>
       </ThemeProvider>

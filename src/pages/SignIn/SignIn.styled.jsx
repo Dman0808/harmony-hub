@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { primaryFont } from "../../components/fonts";
 import { Link as StyledLink } from "react-router-dom";
+import signInBg from "@/assets/sign-in.svg";
 
 export const ContainerStyled = styled(Container)`
   display: flex;
@@ -17,12 +18,24 @@ export const ContainerStyled = styled(Container)`
   min-height: 100vh;
   padding: 1.2rem;
   overflow-x: hidden;
+`;
 
-  background: radial-gradient(
-    circle,
-    rgba(196, 196, 196, 0) 2%,
-    ${(p) => p.theme.colors.mainBgColor} 98%
-  );
+export const FormWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* background: url(${signInBg}) no-repeat left bottom rgba(255, 255, 255, 0.7); */
+  /* background-size: contain; */
+`;
+
+export const SignInSignUpBoxStyled = styled(Box)`
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  position: relative;
 `;
 
 export const BoxStyled = styled(Box)`

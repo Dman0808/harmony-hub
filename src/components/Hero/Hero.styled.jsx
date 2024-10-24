@@ -59,7 +59,7 @@ export const HeroWrapper = styled.div`
   align-items: start;
   gap: 4.8rem;
   margin: 0 auto;
-  margin-top: 12.4rem;
+  margin-top: 14.8rem;
   margin-left: 12.4rem;
 `;
 

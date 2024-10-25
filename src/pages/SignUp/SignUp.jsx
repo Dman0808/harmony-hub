@@ -1,13 +1,15 @@
-import React from "react";
 import { useState } from "react";
-import Grid from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import emailRegex from "../../regex/emailRegex";
 import { Helmet } from "react-helmet-async";
 import {
-  BoxSignUpStyled,
+  BoxStyled,
+  FormWrapper,
+  SignInSignUpBoxStyled,
+} from "../SignIn/SignIn.styled";
+import {
   ContainerSignUpStyled,
   ErrorMessage,
   EyeIconSignUpWrapper,
@@ -20,8 +22,8 @@ import {
   TypoTitleSignUpStyled,
   LoginLink,
   BtnSpan,
-  FieldWrapper,
   PasswordErrorMessage,
+  SignUpTextField,
 } from "./SignUp.styled";
 // import { useDispatch } from "react-redux";
 // import { register } from "@/redux/auth/operations";
@@ -127,28 +129,14 @@ export default function SignUp() {
       </Helmet>
       <ThemeProvider theme={customTheme}>
         <ContainerSignUpStyled>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "1.2rem",
-            }}
-          >
-            <BoxSignUpStyled>
-              <Box
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1.4rem",
-                  position: "relative",
-                }}
-              >
+          <FormWrapper>
+            <BoxStyled>
+              <SignInSignUpBoxStyled>
                 <TypoTitleSignUpStyled variant="h5">
                   Sign Up
                 </TypoTitleSignUpStyled>
-                <LoginLink to="/harmony-hub/signin">Sign In</LoginLink>
-              </Box>
+                <LoginLink to="/signin">Sign In</LoginLink>
+              </SignInSignUpBoxStyled>
               <Box
                 component="form"
                 noValidate
@@ -158,79 +146,61 @@ export default function SignUp() {
                   width: { sm: "376px", xs: "312px" },
                 }}
               >
-                <Grid container spacing={2}>
-                  <Grid item xs={12} style={{ marginTop: "0.4rem" }}>
-                    <FieldWrapper>
-                      <TextFieldSignUpStyled
-                        autoComplete="given-name"
-                        name="name"
-                        required
-                        fullWidth
-                        id="name"
-                        placeholder="Enter your name"
-                        autoFocus
-                        error={errors.name ? true : false}
-                      />
-                      {errors.name && (
-                        <ErrorMessage>{errors.name}</ErrorMessage>
-                      )}
-                    </FieldWrapper>
-                  </Grid>
-                  <Grid item xs={12} style={{ marginTop: "0.4rem" }}>
-                    <FieldWrapper>
-                      <TextFieldSignUpStyled
-                        required
-                        fullWidth
-                        id="email"
-                        placeholder="Enter your email"
-                        name="email"
-                        autoComplete="email"
-                        error={errors.email ? true : false}
-                      />
-                      {errors.email && (
-                        <ErrorMessage>{errors.email}</ErrorMessage>
-                      )}
-                    </FieldWrapper>
-                  </Grid>
-                  <Grid item xs={12} style={{ position: "relative" }}>
-                    <EyePasswordSignUpWrap>
-                      <TextFieldSignUpStyled
-                        placeholder="Create a password"
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        name="password"
-                        id="password"
-                        autoComplete="new-password"
-                        type={showPassword ? "text" : "password"}
-                        error={errors.password ? true : false}
-                      />
+                <SignUpTextField>
+                  <TextFieldSignUpStyled
+                    autoComplete="given-name"
+                    name="name"
+                    required
+                    fullWidth
+                    id="name"
+                    placeholder="Enter your name"
+                    autoFocus
+                    error={errors.name ? true : false}
+                  />
+                  {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>}
+                  <TextFieldSignUpStyled
+                    required
+                    fullWidth
+                    id="email"
+                    placeholder="Enter your email"
+                    name="email"
+                    autoComplete="email"
+                    error={errors.email ? true : false}
+                  />
+                  {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
+                </SignUpTextField>
+                <EyePasswordSignUpWrap>
+                  <TextFieldSignUpStyled
+                    placeholder="Create a password"
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    id="password"
+                    autoComplete="new-password"
+                    type={showPassword ? "text" : "password"}
+                    error={errors.password ? true : false}
+                  />
 
-                      {errors.password && (
-                        <PasswordErrorMessage>
-                          {errors.password}
-                        </PasswordErrorMessage>
-                      )}
-                      <EyeIconSignUpWrapper onClick={handleClickShowPassword}>
-                        {showPassword ? (
-                          <BsFillEyeSlashFill />
-                        ) : (
-                          <BsFillEyeFill />
-                        )}
-                      </EyeIconSignUpWrapper>
-                    </EyePasswordSignUpWrap>
-                  </Grid>
-                </Grid>
+                  {errors.password && (
+                    <PasswordErrorMessage>
+                      {errors.password}
+                    </PasswordErrorMessage>
+                  )}
+                  <EyeIconSignUpWrapper onClick={handleClickShowPassword}>
+                    {showPassword ? <BsFillEyeSlashFill /> : <BsFillEyeFill />}
+                  </EyeIconSignUpWrapper>
+                </EyePasswordSignUpWrap>
                 <SignUpButtonStyled>
                   <SignUpButtonEl type="submit" color="inherit">
                     <BtnSpan>Register Now</BtnSpan>
                   </SignUpButtonEl>
                 </SignUpButtonStyled>
               </Box>
-            </BoxSignUpStyled>
-          </div>
-          <Copyright sx={{ mt: 5 }} />
+            </BoxStyled>
+            <Copyright />
+          </FormWrapper>
         </ContainerSignUpStyled>
       </ThemeProvider>
     </>

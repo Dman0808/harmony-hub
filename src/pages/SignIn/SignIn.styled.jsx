@@ -21,6 +21,7 @@ export const ContainerStyled = styled(Container)`
 
 export const FormWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1.2rem;

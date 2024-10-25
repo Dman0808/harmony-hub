@@ -1,6 +1,8 @@
 import { lazy } from "react";
 import RootLayout from "../layouts/RootLayout";
 import { createRoutesFromElements, Route } from "react-router-dom";
+import { PrivateRoute } from "@/components/PrivateRoute";
+import { RestrictedRoute } from "@/components/RestrictedRoute";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
@@ -16,9 +18,9 @@ export const RouterConfig = () =>
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      {/* <Route
+      <Route
         path="music-hub"
-        element={<PrivateRoute redirectTo="/signin" component={<MusicHub />} />}
+        element={<PrivateRoute redirectTo="/signup" component={<MusicHub />} />}
       />
       <Route
         path="signin"
@@ -27,9 +29,7 @@ export const RouterConfig = () =>
       <Route
         path="signup"
         element={<RestrictedRoute redirectTo="/" component={<SignUp />} />}
-      /> */}
-      <Route path="signin" element={<SignIn />} />
-      <Route path="signup" element={<SignUp />} />
+      />
       <Route path="privacy" element={<Privacy />} />
       <Route path="terms" element={<Terms />} />
       <Route path="*" element={<NotFound />} />

@@ -1,7 +1,7 @@
 {
   "name": "harmony-hub",
   "author": "Alex Smagin",
-  "description": "",
+  "description": "Harmony Hub is an innovative web application that generates personalized music playlists based on users' emotional states, developed as part of Hackathon 2024.",
   "homepage": "http://Alexandrbig1.github.io/harmony-hub",
   "main": "main.jsx",
   "keywords": [
@@ -11,7 +11,14 @@
     "react",
     "vite",
     "redux",
-    "api"
+    "api",
+    "nodejs",
+    "express",
+    "mongoDB",
+    "web application",
+    "hackathon 2024",
+    "technology",
+    "innovation"
   ],
   "private": true,
   "version": "0.0.0",

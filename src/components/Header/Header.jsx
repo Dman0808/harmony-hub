@@ -10,8 +10,12 @@ import {
   HeaderNavWrapper,
   HeaderWrapper,
 } from "./Header.styled";
+import { useAuth } from "@/hooks/useAuth";
+import UserMenu from "../UI/UserMenu/UserMenu";
 
 function Header() {
+  const { isLoggedIn } = useAuth();
+
   return (
     <HeaderWrapper>
       <motion.div
@@ -47,6 +51,7 @@ function Header() {
           >
             <MenuBurgerIcon />
           </motion.div>
+          {isLoggedIn && <UserMenu />}
         </BurgerWrapper>
       </HeaderNavWrapper>
     </HeaderWrapper>

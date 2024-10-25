@@ -123,9 +123,7 @@ export default function SignIn() {
           <FormWrapper>
             <BoxStyled>
               <SignInSignUpBoxStyled>
-                <RegistrationLink to="/harmony-hub/signup">
-                  Sign Up
-                </RegistrationLink>
+                <RegistrationLink to="/signup">Sign Up</RegistrationLink>
                 <TypoTitleStyled variant="h5">Sign In</TypoTitleStyled>
               </SignInSignUpBoxStyled>
               <Box

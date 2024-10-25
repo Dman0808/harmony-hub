@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { primaryFont } from "../../components/fonts";
 import { Link as StyledLink } from "react-router-dom";
-import signInBg from "@/assets/sign-in.svg";
 
 export const ContainerStyled = styled(Container)`
   display: flex;
@@ -27,8 +26,6 @@ export const FormWrapper = styled.div`
   padding: 1.2rem;
   border-radius: 1.2rem;
   background-color: rgba(255, 255, 255, 0.7);
-  /* background: url(${signInBg}) no-repeat left bottom rgba(255, 255, 255, 0.7); */
-  /* background-size: contain; */
 `;
 
 export const SignInSignUpBoxStyled = styled(Box)`
@@ -43,7 +40,6 @@ export const BoxStyled = styled(Box)`
   flex-direction: column;
   width: 100%;
   border-radius: 8px;
-  background: ${(p) => p.theme.colors.mainBgColor};
   max-width: 300px;
   padding: 2.4rem;
 
@@ -66,6 +62,18 @@ export const ButtonEl = styled(Button)`
   height: 4.9rem;
 `;
 
+export const BtnLogInSpan = styled.span`
+  color: ${(p) => p.theme.colors.whiteColor};
+  font-family: ${primaryFont};
+  font-size: 1.4rem;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  transition: all var(--primary-transition);
+`;
+
 export const ButtonStyled = styled.div`
   width: 100%;
   max-width: 260px;
@@ -80,7 +88,7 @@ export const ButtonStyled = styled.div`
 
   margin-top: 2.4rem;
   margin-bottom: 1.6rem;
-  background-color: ${(p) => p.theme.colors.accentColor};
+  background-color: ${(p) => p.theme.colors.buttonBgColor};
   font-size: 2.4rem;
 
   cursor: pointer;
@@ -91,19 +99,11 @@ export const ButtonStyled = styled.div`
   transition: all var(--primary-transition);
 
   &:hover {
-    background-color: ${(p) => p.theme.colors.signUpBgHoverBtn};
+    background-color: ${(p) => p.theme.colors.buttonHoverBgColor};
+    ${BtnLogInSpan} {
+      color: ${(p) => p.theme.colors.mainTextColor};
+    }
   }
-`;
-
-export const BtnLogInSpan = styled.span`
-  color: ${(p) => p.theme.colors.white};
-  font-family: ${primaryFont};
-  font-size: 1.4rem;
-  text-align: center;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.28px;
 `;
 
 export const LinkStyled = styled(Link)`
@@ -111,7 +111,7 @@ export const LinkStyled = styled(Link)`
 `;
 
 export const RegistrationLink = styled(StyledLink)`
-  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
+  color: ${(p) => p.theme.colors.mainTextColor};
   font-family: ${primaryFont};
   font-size: 18px;
   font-style: normal;
@@ -122,30 +122,23 @@ export const RegistrationLink = styled(StyledLink)`
   transition: all var(--primary-transition);
 
   &:hover {
-    color: ${(p) => p.theme.colors.mainHeaderTextColor};
+    color: ${(p) => p.theme.colors.violetColor};
     cursor: pointer;
   }
 `;
 
 export const TypoStyled = styled(Typography)`
-  color: ${(p) => p.theme.colors.blackColor};
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
 export const TypoTitleStyled = styled(Typography)`
-  color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  color: ${(p) => p.theme.colors.headerTextColor};
   font-family: ${primaryFont};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.36px;
-
-  transition: all var(--primary-transition);
-
-  &:hover {
-    color: ${(p) => p.theme.colors.mainHeaderTextColor};
-    cursor: pointer;
-  }
 `;
 
 export const TextFieldStyled = styled(TextField)`
@@ -162,7 +155,7 @@ export const TextFieldStyled = styled(TextField)`
 
   input {
     border-radius: 0.4rem;
-    color: ${(p) => p.theme.colors.mainHeaderTextColor};
+    color: ${(p) => p.theme.colors.mainTextColor};
     font-family: ${primaryFont};
     font-size: 14px;
     font-style: normal;
@@ -173,8 +166,7 @@ export const TextFieldStyled = styled(TextField)`
     transition: all var(--primary-transition);
 
     outline: 1px solid
-      ${(p) =>
-        p.error ? p.theme.colors.errorColor : p.theme.colors.inputColor};
+      ${(p) => (p.error ? p.theme.colors.redColor : p.theme.colors.blueColor)};
     box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
 
     &:focus-within {
@@ -182,7 +174,7 @@ export const TextFieldStyled = styled(TextField)`
     }
 
     &::placeholder {
-      color: ${(p) => p.theme.colors.mainHeaderTextColor};
+      color: ${(p) => p.theme.colors.mainTextColor};
       font-family: ${primaryFont};
       font-style: normal;
       font-weight: 400;
@@ -194,8 +186,7 @@ export const TextFieldStyled = styled(TextField)`
 
   fieldset {
     border: 1px solid
-      ${(p) =>
-        p.error ? p.theme.colors.errorColor : p.theme.colors.inputColor};
+      ${(p) => (p.error ? p.theme.colors.redColor : p.theme.colors.blueColor)};
   }
 
   &:hover fieldset {
@@ -204,8 +195,7 @@ export const TextFieldStyled = styled(TextField)`
 
   &:focus-within fieldset {
     border: 1px solid
-      ${(p) =>
-        p.error ? p.theme.colors.errorColor : p.theme.colors.inputColor};
+      ${(p) => (p.error ? p.theme.colors.redColor : p.theme.colors.blueColor)};
   }
 `;
 
@@ -230,7 +220,7 @@ export const EyeIconWrapper = styled.span`
 
   transform: translateY(-35%);
   font-size: 2rem;
-  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
+  color: ${(p) => p.theme.colors.headerTextColor};
 
   &:hover {
     cursor: pointer;
@@ -241,7 +231,7 @@ export const SignInErrorMessage = styled.p`
   position: absolute;
   top: -0.4rem;
   right: 0;
-  color: ${(p) => p.theme.colors.errorColor};
+  color: ${(p) => p.theme.colors.redColor};
   font-size: 1rem;
 
   @media (min-width: 768px) {

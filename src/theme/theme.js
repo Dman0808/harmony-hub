@@ -3,6 +3,7 @@ export const theme = {
     mainBgColorFirst: "#c8e7ff",
     mainBgColorSecond: "#ffcbf2",
     mainTextColor: "#0c0a09",
+    accentColor: "#4895ef",
     headerTextColor: "#6c757d",
     activeLinkColor: "#000",
     whiteColor: "#fff",

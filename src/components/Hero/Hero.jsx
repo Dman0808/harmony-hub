@@ -17,7 +17,7 @@ function Hero() {
         preferences. Let the power of AI help you find the perfect tunes for any
         moment.
       </HeroText>
-      <HeroButton>
+      <HeroButton to="/music-hub">
         <span>Get Started</span>
         <div>
           <MusicNoteIcon />

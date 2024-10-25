@@ -2,7 +2,6 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { FieldWrapper } from "../SignUp/SignUp.styled";
 import emailRegex from "@/regex/emailRegex";
 import { Helmet } from "react-helmet-async";
 import {
@@ -22,8 +21,8 @@ import {
 } from "./SignIn.styled";
 import { FormWrapper } from "./SignIn.styled";
 import { SignInSignUpBoxStyled } from "./SignIn.styled";
-// import { useDispatch } from "react-redux";
-// import { logIn } from "@/redux/auth/operations";
+import { useDispatch } from "react-redux";
+import { logIn } from "@/redux/auth/operations";
 
 const customTheme = createTheme({
   breakpoints: {
@@ -62,7 +61,7 @@ function Copyright(props) {
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -91,12 +90,12 @@ export default function SignIn() {
 
     if (Object.keys(newErrors).length === 0) {
       setErrors({});
-      // dispatch(
-      //   logIn({
-      //     email,
-      //     password,
-      //   })
-      // );
+      dispatch(
+        logIn({
+          email,
+          password,
+        })
+      );
       form.reset();
     }
   };

@@ -3,6 +3,7 @@ import { primaryFont } from "../fonts";
 import { IoMusicalNote } from "react-icons/io5";
 import { MdOutlineMusicNote } from "react-icons/md";
 import { RiMusic2Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const noteIconFirst = keyframes`
   0% {
@@ -134,7 +135,7 @@ export const MusicNoteIconThird = styled(MdOutlineMusicNote)`
   transition: all var(--primary-transition);
 `;
 
-export const HeroButton = styled.button`
+export const HeroButton = styled(Link)`
   background: none;
   outline: none;
   border: none;

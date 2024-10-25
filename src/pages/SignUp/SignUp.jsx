@@ -25,8 +25,8 @@ import {
   PasswordErrorMessage,
   SignUpTextField,
 } from "./SignUp.styled";
-// import { useDispatch } from "react-redux";
-// import { register } from "@/redux/auth/operations";
+import { useDispatch } from "react-redux";
+import { register } from "@/redux/auth/operations";
 
 const customTheme = createTheme({
   breakpoints: {
@@ -65,7 +65,7 @@ function Copyright(props) {
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -101,13 +101,13 @@ export default function SignUp() {
 
     if (Object.keys(newErrors).length === 0) {
       setErrors({});
-      // dispatch(
-      //   register({
-      //     name,
-      //     email,
-      //     password,
-      //   })
-      // );
+      dispatch(
+        register({
+          name,
+          email,
+          password,
+        })
+      );
       form.reset();
     }
   };

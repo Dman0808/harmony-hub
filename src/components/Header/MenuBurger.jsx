@@ -11,16 +11,21 @@ import {
   BurgerMenuFooterWrapper,
   CloseBurgerIcon,
   CloseBurgerWrapper,
-  LogoImgWrapper,
 } from "./MenuBurger.styled";
 import { useMenu } from "../../context/ToggleMenuContext";
 import SocialIcons from "../UI/SocialIcons/SocialIcons";
 import menuItems from "../../data/menuLists";
-import { LogoImg } from "../UI/Logo/Logo.styled";
+import Logo from "@/components/UI/Logo/Logo";
+import { useAuth } from "../../hooks/useAuth";
 
 // eslint-disable-next-line react/prop-types
 export default function MenuBurger() {
   const { toggleMenu, menuOpen } = useMenu();
+  const { isLoggedIn } = useAuth();
+
+  const filteredMenu = menuItems.filter((item) => {
+    return item.id !== "music-hub" || isLoggedIn;
+  });
 
   const menuVars = (index) => ({
     initial: {
@@ -48,16 +53,7 @@ export default function MenuBurger() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <LogoImgWrapper>
-              <LogoImg
-                src="logo.png"
-                alt="Harmony Hub official logo"
-                title="Harmony Hub official logo"
-                width="36px"
-                height="36px"
-                loading="lazy"
-              />
-            </LogoImgWrapper>
+            <Logo />
           </motion.div>
         )}
         {menuOpen && (
@@ -79,7 +75,7 @@ export default function MenuBurger() {
       <BurgerContainer>
         <nav>
           <BurgerMenuItems>
-            {menuItems.map(({ to, list, id }, idx) => (
+            {filteredMenu.map(({ to, list, id }, idx) => (
               <MenuBurgerItems
                 key={id}
                 onClick={toggleMenu}

@@ -38,7 +38,11 @@ export const Menu = styled.div`
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: ${(p) => p.theme.colors.burgerOverlay};
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.colors.mainBgColorFirst} 10%,
+    ${({ theme }) => theme.colors.mainBgColorSecond} 100%
+  );
   z-index: 2000;
   transform: translateX(${(props) => (props?.$isOpen ? "0%" : "-150%")});
   transition: transform 0.3s ease-in-out;
@@ -47,19 +51,6 @@ export const Menu = styled.div`
 export const IconMenu = styled(TiThMenu)`
   font-size: 2.4rem;
   color: ${(p) => p.theme.colors.whiteColor};
-`;
-
-export const LogoImgWrapper = styled.div`
-  top: -2rem;
-  left: 1.2rem;
-  position: absolute;
-  background-color: ${({ theme }) => theme.colors.whiteColor};
-  border-radius: 50rem;
-  width: 3.2rem;
-  height: 3.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const CloseBurgerWrapper = styled.div`

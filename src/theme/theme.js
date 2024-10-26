@@ -5,6 +5,7 @@ export const theme = {
     mainTextColor: "#0c0a09",
     accentColor: "#4895ef",
     headerTextColor: "#6c757d",
+    burgerOverlay: "#480ca8",
     activeLinkColor: "#000",
     whiteColor: "#fff",
     buttonBgColor: "#4895ef",

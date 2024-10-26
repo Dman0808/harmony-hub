@@ -1,7 +1,10 @@
 import { MusicHubWrapper } from "./MusicHub.styled";
+import { useAuth } from "@/hooks";
 
 function Playlist() {
-  return <MusicHubWrapper>Here will be Playlist</MusicHubWrapper>;
+  const { user } = useAuth();
+
+  return <MusicHubWrapper>{user.name}</MusicHubWrapper>;
 }
 
 export default Playlist;

@@ -10,13 +10,16 @@ export default function UserMenu() {
   const { user } = useAuth();
   return (
     <UserWrap>
+      <TextWrap>
+        <SpanName>{user.name}</SpanName>
+        <Avatar
+          style={{ width: 24, height: 24 }}
+          src="/broken-image.jpg"
+        />{" "}
+      </TextWrap>
       <Button color="inherit" type="button" onClick={() => dispatch(logOut())}>
         Logout
       </Button>
-      <TextWrap>
-        <Avatar style={{ width: 24, height: 24 }} src="/broken-image.jpg" />{" "}
-        <SpanName>{user.name}</SpanName>
-      </TextWrap>
     </UserWrap>
   );
 }

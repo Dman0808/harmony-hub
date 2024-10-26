@@ -1,25 +1,23 @@
 import styled from "styled-components";
+import { primaryFont } from "../../fonts";
 
 export const UserWrap = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 export const TextWrap = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin: 0 6px 0 6px;
+  gap: 0.8rem;
 `;
 
 export const SpanName = styled.span`
-  color: inherit;
-  font-family: "Raleway", sans-serif;
+  color: ${({ theme }) => theme.colors.mainTextColor};
+  font-family: ${primaryFont};
+  text-transform: capitalize;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
-  @media (max-width: 330px) {
-    font-size: 1.4rem;
-  }
 `;

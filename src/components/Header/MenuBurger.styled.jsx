@@ -50,7 +50,7 @@ export const Menu = styled.div`
 
 export const IconMenu = styled(TiThMenu)`
   font-size: 2.4rem;
-  color: ${(p) => p.theme.colors.whiteColor};
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
 export const CloseBurgerWrapper = styled.div`
@@ -61,23 +61,24 @@ export const CloseBurgerWrapper = styled.div`
   top: 3.4rem;
   left: 50%;
   transform: translateX(-50%);
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const CloseBurgerMenu = styled.button`
   border: none;
   outline: none;
   background: none;
-  color: ${(p) => p.theme.colors.blueColor};
-  top: -1.8rem;
-  right: 1rem;
-  position: absolute;
+  color: ${(p) => p.theme.colors.mainTextColor};
   cursor: pointer;
   transition: 0.3s linear;
 
   &:hover,
   &:focus {
     transform: rotate(90deg);
-    color: ${(p) => p.theme.colors.blueColorDark};
+    color: ${(p) => p.theme.colors.accentColor};
   }
 
   @media (min-width: 768px) {
@@ -143,7 +144,7 @@ export const MenuBurgerText = styled(NavLink)`
   gap: 1.2rem;
 
   &.active {
-    color: ${({ theme }) => theme.colors.blueColor};
+    color: ${({ theme }) => theme.colors.accentColor};
 
     ${MenuBurgerLinkIcon} {
       opacity: 1;

@@ -1,4 +1,9 @@
 import { motion } from "framer-motion";
+import { useMenu } from "../../context/ToggleMenuContext";
+import SocialIcons from "../UI/SocialIcons/SocialIcons";
+import menuItems from "../../data/menuLists";
+import Logo from "@/components/UI/Logo/Logo";
+import { useAuth } from "../../hooks/useAuth";
 import {
   BurgerContainer,
   CloseBurgerMenu,
@@ -12,11 +17,6 @@ import {
   CloseBurgerIcon,
   CloseBurgerWrapper,
 } from "./MenuBurger.styled";
-import { useMenu } from "../../context/ToggleMenuContext";
-import SocialIcons from "../UI/SocialIcons/SocialIcons";
-import menuItems from "../../data/menuLists";
-import Logo from "@/components/UI/Logo/Logo";
-import { useAuth } from "../../hooks/useAuth";
 
 // eslint-disable-next-line react/prop-types
 export default function MenuBurger() {

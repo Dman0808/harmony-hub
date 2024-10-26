@@ -46,7 +46,7 @@ export const HeaderNavLink = styled(NavLink)`
   font-size: 1.6rem;
   font-weight: 700;
   font-family: ${primaryFont};
-  color: ${({ theme }) => theme.colors.headerTextColor};
+  color: ${({ theme }) => theme.colors.mainTextColor};
   line-height: 1.28571;
   transition: all var(--primary-transition);
 
@@ -72,6 +72,7 @@ export const HeaderNavLink = styled(NavLink)`
 
   &:hover {
     color: ${({ theme }) => theme.colors.activeLinkColor};
+    color: ${({ theme }) => theme.colors.pinkColor};
   }
 
   &.active {
@@ -82,5 +83,4 @@ export const HeaderNavLink = styled(NavLink)`
 export const BurgerWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.2rem;
 `;

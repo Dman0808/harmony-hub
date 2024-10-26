@@ -1,4 +1,4 @@
-import { useMenu } from "../../context/ToggleMenuContext";
+import { useMenu } from "@/context/ToggleMenuContext";
 import {
   IconMenu,
   IconMenuWrapper,

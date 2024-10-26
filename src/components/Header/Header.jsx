@@ -2,6 +2,8 @@ import Logo from "../UI/Logo/Logo";
 import MenuLists from "../../data/menuLists";
 import { motion } from "framer-motion";
 import MenuBurgerIcon from "./MenuBurgerIcon";
+import { useAuth } from "@/hooks/useAuth";
+import UserMenu from "../UI/UserMenu/UserMenu";
 import {
   BurgerWrapper,
   HeaderItems,
@@ -10,8 +12,6 @@ import {
   HeaderNavWrapper,
   HeaderWrapper,
 } from "./Header.styled";
-import { useAuth } from "@/hooks/useAuth";
-import UserMenu from "../UI/UserMenu/UserMenu";
 
 function Header() {
   const { isLoggedIn } = useAuth();
@@ -46,6 +46,7 @@ function Header() {
           </HeaderNavMenu>
         </nav>
         <BurgerWrapper>
+          {isLoggedIn && <UserMenu />}
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,7 +54,6 @@ function Header() {
           >
             <MenuBurgerIcon />
           </motion.div>
-          {isLoggedIn && <UserMenu />}
         </BurgerWrapper>
       </HeaderNavWrapper>
     </HeaderWrapper>

@@ -57,20 +57,26 @@ export const HeroWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 4.8rem;
+  justify-content: center;
   margin: 0 auto;
-  margin-top: 14.8rem;
-  margin-left: 12.4rem;
+  padding: 0 1.2rem;
+  gap: 2.4rem;
+
+  @media (min-width: 1440px) {
+    gap: 4.8rem;
+    align-items: start;
+    justify-content: unset;
+    margin-top: 14.8rem;
+    margin-left: 12.4rem;
+  }
 `;
 
 export const HeroTitle = styled.h1`
   font-family: ${primaryFont};
   font-weight: 600;
-  font-size: 5.2rem;
+  font-size: 3.2rem;
   line-height: 0.88;
   text-transform: uppercase;
-  /* color: ${({ theme }) => theme.colors.buttonHoverBgColor}; */
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-image: linear-gradient(
@@ -84,15 +90,23 @@ export const HeroTitle = styled.h1`
   );
   background-size: 100%;
   -webkit-box-decoration-break: clone;
-  white-space: nowrap;
-  /* text-shadow: 0 0 1px ${({ theme }) => theme.colors.blueColor},
-    0 0 2px ${({ theme }) => theme.colors.blueColor},
-    0 0 3px ${({ theme }) => theme.colors.blueColor},
-    0 0 4px ${({ theme }) => theme.colors.pinkColor},
-    0 0 5px ${({ theme }) => theme.colors.pinkColor},
-    0 0 6px ${({ theme }) => theme.colors.pinkColor},
-    0 0 7px ${({ theme }) => theme.colors.pinkColor},
-    0 0 8px ${({ theme }) => theme.colors.pinkColor}; */
+
+  @media (min-width: 360px) {
+    font-size: 3.4rem;
+  }
+
+  @media (min-width: 380px) {
+    font-size: 3.6rem;
+  }
+
+  @media (min-width: 768px) {
+    white-space: nowrap;
+    font-size: 4.4rem;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 5.2rem;
+  }
 `;
 
 export const HeroText = styled.p`
@@ -103,7 +117,7 @@ export const HeroText = styled.p`
   color: ${({ theme }) => theme.colors.mainTextColor};
   width: 100%;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     font-size: 1.8rem;
     max-width: 54rem;
   }
@@ -113,7 +127,6 @@ export const MusicNoteIcon = styled(IoMusicalNote)`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.colors.pinkColor};
   transform: rotate(-25deg);
-  /* opacity: 0; */
 
   transition: opacity var(--primary-transition);
 `;
@@ -121,7 +134,6 @@ export const MusicNoteIcon = styled(IoMusicalNote)`
 export const MusicNoteIconSecond = styled(RiMusic2Line)`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.colors.violetColor};
-  /* opacity: 0; */
 
   transition: opacity var(--primary-transition);
 `;
@@ -129,7 +141,6 @@ export const MusicNoteIconSecond = styled(RiMusic2Line)`
 export const MusicNoteIconThird = styled(MdOutlineMusicNote)`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.colors.redColor};
-  /* opacity: 0; */
   transform: rotate(15deg);
 
   transition: all var(--primary-transition);
@@ -151,6 +162,7 @@ export const HeroButton = styled(Link)`
   background-color: ${({ theme }) => theme.colors.buttonBgColor};
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.2rem;
   transition: all var(--primary-transition);
 
@@ -167,5 +179,9 @@ export const HeroButton = styled(Link)`
     ${MusicNoteIconThird} {
       animation: ${noteIconThird} 3s 0.2s infinite;
     }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 32rem;
   }
 `;

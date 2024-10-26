@@ -7,6 +7,7 @@ node_modules/
 # OS-specific files
 .DS_Store
 Thumbs.db
+Desktop.ini
 
 # User-specific files
 *.log
@@ -17,9 +18,15 @@ Thumbs.db
 # Editor directories and files
 .idea/
 .vscode/
+*.sublime-workspace
+*.sublime-project
 
-# Environment variables file
+# Environment variables files
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Coverage directory
 coverage/
@@ -27,10 +34,13 @@ coverage/
 # Built/compiled files
 lib/
 dist/
+build/
 
 # Logs
 log/
 logs/
+*.log
+*.log.*
 
 # Output of 'npm pack'
 *.tgz
@@ -38,7 +48,7 @@ logs/
 # Yarn integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+# dotenv environment variables files
 .env.local
 .env.development.local
 .env.test.local
@@ -47,14 +57,6 @@ logs/
 # Node.js process files
 npm-debug.log
 yarn-error.log
-
-# System files
-.DS_Store
-Desktop.ini
-thumbs.db
-
-# Visual Studio Code directory
-.vscode/
 
 # Windows Installer files
 *.cab
@@ -65,22 +67,35 @@ thumbs.db
 # Windows shortcuts
 *.lnk
 
-# JetBrains Rider
+# JetBrains Rider and Visual Studio files
 .idea/
 *.sln.iml
-
-# user-specific files
-.idea/
 *.suo
 *.ntvs*
 *.njsproj
-*.suo
 *.user
 *.userosscache
-*.suo
-*.suo
-*.suo
-*.suo
 *.sw?
+*.sublime-*
+
 # Local Netlify folder
 .netlify
+.netlify/state.json
+
+# Cache files for faster builds
+.cache/
+.next/
+out/
+.parcel-cache/
+
+# Miscellaneous temp files and swap files for Vim
+*.swp
+
+# Storybook files
+storybook-static/
+
+# Jest snapshot files
+*.snap
+
+# Stylelint cache
+.stylelintcache

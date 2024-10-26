@@ -16,6 +16,10 @@ import UserMenu from "../UI/UserMenu/UserMenu";
 function Header() {
   const { isLoggedIn } = useAuth();
 
+  const filteredMenu = MenuLists.filter((item) => {
+    return item.id !== "music-hub" || isLoggedIn;
+  });
+
   return (
     <HeaderWrapper>
       <motion.div
@@ -28,19 +32,17 @@ function Header() {
       <HeaderNavWrapper>
         <nav>
           <HeaderNavMenu>
-            {MenuLists.map(({ to, list }) => {
-              return (
-                <HeaderItems key={to}>
-                  <motion.div
-                    initial={{ opacity: 0, y: -100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ type: "spring", delay: 0.75 }}
-                  >
-                    <HeaderNavLink to={to}>{list}</HeaderNavLink>
-                  </motion.div>
-                </HeaderItems>
-              );
-            })}
+            {filteredMenu.map(({ to, list }) => (
+              <HeaderItems key={to}>
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ type: "spring", delay: 0.75 }}
+                >
+                  <HeaderNavLink to={to}>{list}</HeaderNavLink>
+                </motion.div>
+              </HeaderItems>
+            ))}
           </HeaderNavMenu>
         </nav>
         <BurgerWrapper>

@@ -1,4 +1,5 @@
 [
   { "id": "home", "to": "/", "list": "Home" },
-  { "id": "about", "to": "/about", "list": "About" }
+  { "id": "about", "to": "/about", "list": "About" },
+  { "id": "music-hub", "to": "/music-hub", "list": "Music" }
 ]

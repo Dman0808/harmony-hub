@@ -32,7 +32,8 @@ body {
   background-repeat: no-repeat;
   background-position: 85%;
   line-height: 1.5;
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,7 +41,6 @@ body {
   @media(min-width: 1220px) {
   background-position: center;
   background-size: cover;
-  
   }
 }
 

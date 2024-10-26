@@ -4,7 +4,7 @@ export const theme = {
     mainBgColorSecond: "#ffcbf2",
     mainTextColor: "#0c0a09",
     accentColor: "#4895ef",
-    headerTextColor: "#6c757d",
+    headerTextColor: "#495057",
     burgerOverlay: "#480ca8",
     activeLinkColor: "#000",
     whiteColor: "#fff",

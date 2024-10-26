@@ -47,6 +47,7 @@ export const HeaderNavLink = styled(NavLink)`
   font-weight: 700;
   font-family: ${primaryFont};
   color: ${({ theme }) => theme.colors.mainTextColor};
+  color: ${({ theme }) => theme.colors.headerTextColor};
   line-height: 1.28571;
   transition: all var(--primary-transition);
 
@@ -72,7 +73,6 @@ export const HeaderNavLink = styled(NavLink)`
 
   &:hover {
     color: ${({ theme }) => theme.colors.activeLinkColor};
-    color: ${({ theme }) => theme.colors.pinkColor};
   }
 
   &.active {

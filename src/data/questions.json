@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How are you feeling today?",
+    "example": "e.g., happy, calm, energetic, focused"
+  },
+  {
+    "question": "What genres of music do you enjoy the most?",
+    "example": "e.g., pop, rock, jazz, electronic, classical"
+  },
+  {
+    "question": "Are you looking for music to relax, get motivated, focus, or simply enjoy?",
+    "example": ""
+  },
+  {
+    "question": "Any favorite artists or bands you'd love to hear?",
+    "example": ""
+  },
+  {
+    "question": "Do you have a preference for music tempo?",
+    "example": "e.g., slow and relaxing, upbeat and fast, medium-paced"
+  }
+]

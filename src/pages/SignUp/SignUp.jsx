@@ -4,6 +4,8 @@ import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import emailRegex from "../../regex/emailRegex";
 import { Helmet } from "react-helmet-async";
+import { useDispatch } from "react-redux";
+import { register } from "@/redux/auth/operations";
 import {
   BoxStyled,
   FormWrapper,
@@ -25,8 +27,6 @@ import {
   PasswordErrorMessage,
   SignUpTextField,
 } from "./SignUp.styled";
-import { useDispatch } from "react-redux";
-import { register } from "@/redux/auth/operations";
 
 const customTheme = createTheme({
   breakpoints: {

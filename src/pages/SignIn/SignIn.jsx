@@ -4,6 +4,10 @@ import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import emailRegex from "@/regex/emailRegex";
 import { Helmet } from "react-helmet-async";
+import { FormWrapper } from "./SignIn.styled";
+import { SignInSignUpBoxStyled } from "./SignIn.styled";
+import { useDispatch } from "react-redux";
+import { logIn } from "@/redux/auth/operations";
 import {
   BoxStyled,
   ButtonEl,
@@ -19,10 +23,6 @@ import {
   RegistrationLink,
   BtnLogInSpan,
 } from "./SignIn.styled";
-import { FormWrapper } from "./SignIn.styled";
-import { SignInSignUpBoxStyled } from "./SignIn.styled";
-import { useDispatch } from "react-redux";
-import { logIn } from "@/redux/auth/operations";
 
 const customTheme = createTheme({
   breakpoints: {

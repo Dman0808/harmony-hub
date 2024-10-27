@@ -12,6 +12,8 @@ export const theme = {
     buttonHoverBgColor: "#4cc9f0",
     pinkColor: "#f72585",
     blueColor: "#4cc9f0",
+    darkBlueColor: "#0077ff",
+    hoverDarkBlueColor: "#005bb5",
     violetColor: "#7209b7",
     redColor: "#ff073a",
     greenColor: "#49ff18",

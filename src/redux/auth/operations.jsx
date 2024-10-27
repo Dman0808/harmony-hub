@@ -19,8 +19,7 @@ export const register = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await axios.post("/auth/signup", credentials);
-      console.log(res.data);
-      setAuthHeader(res.data.token);
+      setAuthHeader(res.data.user.token);
       toast.success(
         "Congratulations, your account has been successfully created. Welcome to Harmony Hub!",
         commonToastOptions

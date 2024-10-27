@@ -125,17 +125,18 @@ export const NextButton = styled.button`
 `;
 
 export const RedirectButton = styled.button`
-  margin-top: 20px;
-  padding: 10px 15px;
-  background-color: #4caf50;
-  color: white;
+  width: 100%;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4rem;
+  color: ${({ theme }) => theme.colors.whiteColor};
+  background-color: ${({ theme }) => theme.colors.darkGreenColor};
   border: none;
-  border-radius: 5px;
+  border-radius: 0.8rem;
   cursor: pointer;
-  font-size: 16px;
+  transition: background-color var(--primary-transition);
 
   &:hover {
-    background-color: #45a049;
+    background-color: ${({ theme }) => theme.colors.darkGreenColorHover};
   }
 `;
 

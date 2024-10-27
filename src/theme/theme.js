@@ -17,5 +17,7 @@ export const theme = {
     violetColor: "#7209b7",
     redColor: "#ff073a",
     greenColor: "#49ff18",
+    darkGreenColor: "#4caf50",
+    darkGreenColorHover: "#45a049",
   },
 };

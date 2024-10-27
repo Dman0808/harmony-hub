@@ -121,14 +121,12 @@ function Playlist() {
                 : "Next"}
             </NextButton>
             <ResetButton onClick={handleReset}>Reset</ResetButton>
-            {redirectUrl && (
-              <RedirectButton
-                onClick={() => window.open(redirectUrl, "_blank")}
-              >
-                Go to Your Ringtone
-              </RedirectButton>
-            )}
           </ButtonWrapper>
+          {redirectUrl && (
+            <RedirectButton onClick={() => window.open(redirectUrl, "_blank")}>
+              Go to Your Ringtone
+            </RedirectButton>
+          )}
         </MusicFormWrapper>
       </MusicTextWrapper>
     </MusicHubWrapper>

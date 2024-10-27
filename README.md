@@ -2,6 +2,40 @@
 
 Welcome to the frontend repository of **Harmony Hub**! This project delivers an intuitive and responsive interface that lets users generate personalized music based on their emotional state. Developed as part of the **Cyberjam 2024 Hackathon**, Harmony Hub provides an engaging and interactive way to enhance users' music experience.
 
+<img align="right" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="100"/>
+
+[![GitHub last commit](https://img.shields.io/github/last-commit/Alexandrbig1/trail_quest)](https://github.com/Alexandrbig1/trail_quest/commits/main)
+[![GitHub license](https://img.shields.io/github/license/Alexandrbig1/trail_quest)](https://github.com/Alexandrbig1/trail_quest/blob/main/LICENSE)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Latest-EAD319.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Axios](https://img.shields.io/badge/Axios-1.6.4-5300D8.svg)](https://github.com/axios/axios)
+[![Vite](https://img.shields.io/badge/Vite-5.0.8-6868F2)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-18.2.0-51CAEF.svg)](https://reactjs.org/)
+[![Redux](https://img.shields.io/badge/Redux-8.1.3-6231AF.svg)](https://redux.js.org/)
+[![Styled Components](https://img.shields.io/badge/Styled_Components-6.1.6-D664C0.svg)](https://styled-components.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.1.1-00ADD8.svg)](https://www.framer.com/motion/)
+[![React Icons](https://img.shields.io/badge/React_Icons-5.0.1-E10051.svg)](https://react-icons.github.io/react-icons/)
+[![Node.js Version](https://img.shields.io/badge/Node.js-v18.18.0-2B8B27)](https://nodejs.org/)
+[![Express.js Version](https://img.shields.io/badge/Express.js-v4.18.2-000000)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-v6.3.0-3B9539)](https://www.mongodb.com/)
+[![Mongoose Version](https://img.shields.io/badge/Mongoose-v8.0.3-6B0002)](https://mongoosejs.com/)
+[![Git](https://img.shields.io/badge/Git-2.35.1-F05032.svg)](https://git-scm.com/)
+
+---
+
+## Live Demo
+
+[Live Demo](https://harmony-hub-live.netlify.app)
+
+## Backend Repository
+
+[FrontEnd](https://github.com/Alexandrbig1/harmony-hub-backend)
+
+## Backend APIs with Swagger Documentation
+
+[Swagger](https://harmony-hub-backend.onrender.com/api-docs)
+
+---
+
 ## Table of Contents
 
 - [Features](#features)
@@ -10,26 +44,41 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 - [Contributing](#contributing)
 - [License](#license)
 
+---
+
 ## Features
 
-- **Personalized Playlists**: Curated music based on users' emotional state.
-- **User Authentication**: Secure user login and registration flow.
-- **Responsive Design**: Supports both mobile and desktop views.
-- **Real-Time Feedback**: Dynamic UI that adapts to user inputs.
-- **Hackathon Project**: Developed for Cyberjam 2024, where participants build projects that combine art, technology, and innovation.
+- **Personalized Music Playlists**: Generates curated playlists tailored to users' moods, music preferences, and energy levels.
+- **User Authentication**: Secure and streamlined login and registration with session handling.
+- **Responsive Design**: Fully optimized for both mobile and desktop for seamless user experience across devices.
+- **Dynamic User Interaction**: Real-time UI updates based on user selections, providing instant feedback and engagement.
+- **Hackathon Project for Cyberjam 2024**: Built with a focus on blending art, technology, and user-centered design for Cyberjam's innovation-driven hackathon.
+- **Music AI Integration**: Leverages Suno AI for high-quality music recommendation and creation.
+- **On-Chain Component**: Utilizes Chainlink Functions to integrate blockchain-powered features, enhancing transparency and security.
 
-## Tech Stack
+---
+
+### Tech Stack
 
 - **Frontend Framework**: React
 - **Bundler**: Vite
 - **Styling**: Styled Components
 - **Animations**: Framer Motion
-- **State Management**: Redux
+- **State Management**: Redux Toolkit
 - **Routing**: React Router
 - **Form Validation**: Formik and Yup
-- **Backend Framework**: Python Sanic 
-- **Onchain Component**: Chainlink Functions
+
+- **Backend**:
+  - **Runtime**: Node.js
+  - **Framework**: Express.js
+  - **Database**: MongoDB
+  - **Additional Backend Framework**: Python Sanic
+  - **Hosting**: Render
+
+- **On-chain Component**: Chainlink Functions
 - **Music AI**: Suno AI
+
+---
 
 ## Project Structure
 

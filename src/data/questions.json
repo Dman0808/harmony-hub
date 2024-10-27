@@ -1,22 +1,22 @@
 [
   {
-    "question": "How are you feeling today?",
-    "example": "e.g., happy, calm, energetic, focused"
+    "question": "Who's calling you?",
+    "example": "e.g., Mom, Dad, side bae"
   },
   {
-    "question": "What genres of music do you enjoy the most?",
-    "example": "e.g., pop, rock, jazz, electronic, classical"
+    "question": "Pick an instrument.",
+    "example": "e.g., guitar, piano, accordian"
   },
   {
-    "question": "Are you looking for music to relax, get motivated, focus, or simply enjoy?",
-    "example": ""
+    "question": "Select a genre that reflects their personality",
+    "example": "e.g., jazz, heavy metal, folk"
   },
   {
-    "question": "Any favorite artists or bands you'd love to hear?",
-    "example": ""
+    "question": "If they could be a pop-star, who would it be?",
+    "example": "e.g., prince, beyonce, taylor swift, sabrina carpenter"
   },
   {
-    "question": "Do you have a preference for music tempo?",
+    "question": "What's their vibe?",
     "example": "e.g., slow and relaxing, upbeat and fast, medium-paced"
   }
 ]

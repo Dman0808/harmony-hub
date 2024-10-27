@@ -13,7 +13,8 @@ import {
   MusicFormWrapper,
   MusicTextWrapper,
   MusicTitle,
-  // ExampleText,
+  RedirectButton,
+  ResetButton
 } from "./MusicHub.styled";
 
 function Playlist() {
@@ -21,6 +22,7 @@ function Playlist() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [redirectUrl, setRedirectUrl] = useState("");
 
   const handleAnswerChange = (e) => {
     const newAnswers = [...answers];
@@ -29,23 +31,52 @@ function Playlist() {
   };
 
   const handleNextQuestion = () => {
+    if (loading) return;
+
     if (currentQuestion < questionsData.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setLoading(true);
-      toast.info(
-        "Processing your playlist, please wait...",
-        commonToastOptions
-      );
-
-      setTimeout(() => {
-        setLoading(false);
-        toast.success(
-          "Your personalized playlist is ready!",
-          commonToastOptions
-        );
-      }, 2000);
+      return;
     }
+
+    setLoading(true);
+    toast.info("Processing your ringtone, please wait...", commonToastOptions);
+
+    fetch(
+      `https://bc0c-73-51-227-110.ngrok-free.app/api/generate?prompt=${encodeURIComponent(answers.join(". "))}`,
+      {
+        method: "GET",
+        redirect: "follow",
+        headers: {
+          "ngrok-skip-browser-warning": "69420"
+        }
+      }
+    )
+      .then((response) => {
+        const contentType = response.headers.get("content-type");
+        if (response.ok && contentType && contentType.includes("application/json")) {
+          return response.json(); 
+        } else {
+          return response.text().then((errorText) => {
+            throw new Error("Failed to generate the playlist.");
+          });
+        }
+      })
+      .then((data) => {
+        toast.success("Your personalized playlist is ready!", commonToastOptions);
+        setRedirectUrl(data.url); 
+      })
+      .catch((error) => {
+        toast.error("An error occurred. Please try again later.", commonToastOptions);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  const handleReset = () => {
+    setCurrentQuestion(0);
+    setAnswers([]);
+    setRedirectUrl("");
   };
 
   const { question, example } = questionsData[currentQuestion];
@@ -61,7 +92,6 @@ function Playlist() {
           </StepCounter>
           <QuestionWrapper>
             <QuestionText>{question}</QuestionText>
-            {/* {example && <ExampleText>{example}</ExampleText>} */}
             <AnswerInput
               type="text"
               value={answers[currentQuestion] || ""}
@@ -76,6 +106,12 @@ function Playlist() {
               ? "Generate"
               : "Next"}
           </NextButton>
+          {redirectUrl && (
+            <RedirectButton onClick={() => window.open(redirectUrl, "_blank")}>
+              Go to Your Ringtone
+            </RedirectButton>
+          )}
+          <ResetButton onClick={handleReset}>Reset</ResetButton>
         </MusicFormWrapper>
       </MusicTextWrapper>
     </MusicHubWrapper>

@@ -14,7 +14,8 @@ import {
   MusicTextWrapper,
   MusicTitle,
   RedirectButton,
-  ResetButton
+  ResetButton,
+  ButtonWrapper,
 } from "./MusicHub.styled";
 
 function Playlist() {
@@ -42,19 +43,25 @@ function Playlist() {
     toast.info("Processing your ringtone, please wait...", commonToastOptions);
 
     fetch(
-      `https://bc0c-73-51-227-110.ngrok-free.app/api/generate?prompt=${encodeURIComponent(answers.join(". "))}`,
+      `https://bc0c-73-51-227-110.ngrok-free.app/api/generate?prompt=${encodeURIComponent(
+        answers.join(". ")
+      )}`,
       {
         method: "GET",
         redirect: "follow",
         headers: {
-          "ngrok-skip-browser-warning": "69420"
-        }
+          "ngrok-skip-browser-warning": "69420",
+        },
       }
     )
       .then((response) => {
         const contentType = response.headers.get("content-type");
-        if (response.ok && contentType && contentType.includes("application/json")) {
-          return response.json(); 
+        if (
+          response.ok &&
+          contentType &&
+          contentType.includes("application/json")
+        ) {
+          return response.json();
         } else {
           return response.text().then((errorText) => {
             throw new Error("Failed to generate the playlist.");
@@ -62,11 +69,17 @@ function Playlist() {
         }
       })
       .then((data) => {
-        toast.success("Your personalized playlist is ready!", commonToastOptions);
-        setRedirectUrl(data.url); 
+        toast.success(
+          "Your personalized playlist is ready!",
+          commonToastOptions
+        );
+        setRedirectUrl(data.url);
       })
       .catch((error) => {
-        toast.error("An error occurred. Please try again later.", commonToastOptions);
+        toast.error(
+          "An error occurred. Please try again later.",
+          commonToastOptions
+        );
       })
       .finally(() => {
         setLoading(false);
@@ -99,19 +112,23 @@ function Playlist() {
               placeholder={example ? example : "Type your answer here"}
             />
           </QuestionWrapper>
-          <NextButton onClick={handleNextQuestion} disabled={loading}>
-            {loading
-              ? "Generating..."
-              : currentQuestion === questionsData.length - 1
-              ? "Generate"
-              : "Next"}
-          </NextButton>
-          {redirectUrl && (
-            <RedirectButton onClick={() => window.open(redirectUrl, "_blank")}>
-              Go to Your Ringtone
-            </RedirectButton>
-          )}
-          <ResetButton onClick={handleReset}>Reset</ResetButton>
+          <ButtonWrapper>
+            <NextButton onClick={handleNextQuestion} disabled={loading}>
+              {loading
+                ? "Generating..."
+                : currentQuestion === questionsData.length - 1
+                ? "Generate"
+                : "Next"}
+            </NextButton>
+            <ResetButton onClick={handleReset}>Reset</ResetButton>
+            {redirectUrl && (
+              <RedirectButton
+                onClick={() => window.open(redirectUrl, "_blank")}
+              >
+                Go to Your Ringtone
+              </RedirectButton>
+            )}
+          </ButtonWrapper>
         </MusicFormWrapper>
       </MusicTextWrapper>
     </MusicHubWrapper>

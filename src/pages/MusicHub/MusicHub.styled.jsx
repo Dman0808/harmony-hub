@@ -88,6 +88,18 @@ export const AnswerInput = styled.input`
   }
 `;
 
+export const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
 export const NextButton = styled.button`
   width: 100%;
   padding: 1.2rem 2.4rem;
@@ -108,14 +120,14 @@ export const NextButton = styled.button`
   }
 
   @media (min-width: 768px) {
-    max-width: 24rem;
+    /* max-width: 24rem; */
   }
 `;
 
 export const RedirectButton = styled.button`
   margin-top: 20px;
   padding: 10px 15px;
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
@@ -123,21 +135,29 @@ export const RedirectButton = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: #45a049; /* Darker green */
+    background-color: #45a049;
   }
 `;
 
 export const ResetButton = styled.button`
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #f44336; /* Red */
-  color: white;
+  width: 100%;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4rem;
+  color: ${({ theme }) => theme.colors.mainTextColor};
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
+  outline: 2px solid ${({ theme }) => theme.colors.redColor};
+  border-radius: 0.8rem;
   cursor: pointer;
-  font-size: 16px;
+  transition: background-color var(--primary-transition);
 
   &:hover {
-    background-color: #d32f2f; /* Darker red */
+    background-color: ${({ theme }) => theme.colors.redColor};
+    color: ${({ theme }) => theme.colors.whiteColor};
+    outline: 2px solid ${({ theme }) => theme.colors.redColor};
+  }
+
+  @media (min-width: 768px) {
+    /* max-width: 24rem; */
   }
 `;

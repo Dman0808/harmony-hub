@@ -43,7 +43,7 @@ function Playlist() {
     toast.info("Processing your ringtone, please wait...", commonToastOptions);
 
     fetch(
-      `https://bc0c-73-51-227-110.ngrok-free.app/api/generate?prompt=${encodeURIComponent(
+      `https://737f-50-171-3-130.ngrok-free.app/api/generate?prompt=${encodeURIComponent(
         answers.join(". ")
       )}`,
       {

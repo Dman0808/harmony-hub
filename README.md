@@ -80,27 +80,6 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 
 ---
 
-## Project Structure
-
-harmony-hub-frontend/
-├── public/ # Public assets
-├── src/
-│ ├── components/ # Reusable UI components  
-│ ├── hooks/ # Custom React hooks
-│ ├── pages/ # Page components for each route
-│ ├── redux/ # Redux store and slices
-│ ├── services/ # API service functions
-│ └── main.js # Entry point
-├── .gitignore # Git ignore rules
-├── package.json # Project dependencies and scripts
-├── Syrobob-server.py # Sanic API triggers Chainlink request
-├── Syrobob-request.js # Chainlink custom function 
-├── Functions-request-config.js # Chainlink function config 
-├── package.json # Project dependencies and scripts
-└── README.md # Project documentation
-
----
-
 ## Issues
 
 If you encounter any issues or have suggestions, please

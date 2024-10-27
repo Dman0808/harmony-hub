@@ -40,9 +40,11 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
+- [Issues](#issues)
 - [License](#license)
+- [Feedback](#feedback)
+- [Languages and Tools](#languages_and_tools)
+- [Connect with me](#connect_with_me)
 
 ---
 
@@ -117,7 +119,7 @@ I welcome feedback and suggestions to improve the application's functionality an
 
 ---
 
-## Connect with me:
+## Connect with me
 
 <div align="center">
 <a href="https://linkedin.com/in/alex-smagin29" target="_blank">

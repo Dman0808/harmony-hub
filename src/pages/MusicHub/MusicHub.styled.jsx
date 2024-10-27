@@ -111,3 +111,33 @@ export const NextButton = styled.button`
     max-width: 24rem;
   }
 `;
+
+export const RedirectButton = styled.button`
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #45a049; /* Darker green */
+  }
+`;
+
+export const ResetButton = styled.button`
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #f44336; /* Red */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #d32f2f; /* Darker red */
+  }
+`;

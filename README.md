@@ -1,6 +1,6 @@
 # Harmony Hub Frontend
 
-Welcome to the frontend repository of **Harmony Hub**! This project delivers an intuitive and responsive interface that lets users generate personalized music playlists based on their emotional state. Developed as part of the **Cyberjam 2024 Hackathon**, Harmony Hub provides an engaging and interactive way to enhance users' music experience.
+Welcome to the frontend repository of **Harmony Hub**! This project delivers an intuitive and responsive interface that lets users generate personalized music based on their emotional state. Developed as part of the **Cyberjam 2024 Hackathon**, Harmony Hub provides an engaging and interactive way to enhance users' music experience.
 
 ## Table of Contents
 
@@ -12,10 +12,10 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 
 ## Features
 
-- **Personalized Playlists**: Curated music playlists based on users' emotional states.
+- **Personalized Playlists**: Curated music based on users' emotional state.
 - **User Authentication**: Secure user login and registration flow.
-- **Responsive Design**: Fully optimized for both mobile and desktop views.
-- **Real-Time Feedback**: Dynamic UI that adapts to user inputs in real-time.
+- **Responsive Design**: Supports both mobile and desktop views.
+- **Real-Time Feedback**: Dynamic UI that adapts to user inputs.
 - **Hackathon Project**: Developed for Cyberjam 2024, where participants build projects that combine art, technology, and innovation.
 
 ## Tech Stack
@@ -27,6 +27,9 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 - **State Management**: Redux
 - **Routing**: React Router
 - **Form Validation**: Formik and Yup
+- **Backend Framework**: Python Sanic 
+- **Onchain Component**: Chainlink Functions
+- **Music AI**: Suno AI
 
 ## Project Structure
 
@@ -40,6 +43,10 @@ harmony-hub-frontend/
 │ ├── services/ # API service functions
 │ └── main.js # Entry point
 ├── .gitignore # Git ignore rules
+├── package.json # Project dependencies and scripts
+├── Syrobob-server.py # Sanic API triggers Chainlink request
+├── Syrobob-request.js # Chainlink custom function 
+├── Functions-request-config.js # Chainlink function config 
 ├── package.json # Project dependencies and scripts
 └── README.md # Project documentation
 

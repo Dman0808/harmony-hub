@@ -28,7 +28,7 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 
 ## Backend Repository
 
-[FrontEnd](https://github.com/Alexandrbig1/harmony-hub-backend)
+[Backend](https://github.com/Alexandrbig1/harmony-hub-backend)
 
 ## Backend APIs with Swagger Documentation
 

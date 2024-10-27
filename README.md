@@ -1,7 +1,5 @@
 # Harmony Hub Frontend
 
-Welcome to the frontend repository of **Harmony Hub**! This project delivers an intuitive and responsive interface that lets users generate personalized music based on their emotional state. Developed as part of the **Cyberjam 2024 Hackathon**, Harmony Hub provides an engaging and interactive way to enhance users' music experience.
-
 <img align="right" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="100"/>
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Alexandrbig1/trail_quest)](https://github.com/Alexandrbig1/trail_quest/commits/main)
@@ -19,6 +17,8 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 [![MongoDB](https://img.shields.io/badge/MongoDB-v6.3.0-3B9539)](https://www.mongodb.com/)
 [![Mongoose Version](https://img.shields.io/badge/Mongoose-v8.0.3-6B0002)](https://mongoosejs.com/)
 [![Git](https://img.shields.io/badge/Git-2.35.1-F05032.svg)](https://git-scm.com/)
+
+Welcome to the frontend repository of **Harmony Hub**! This project delivers an intuitive and responsive interface that lets users generate personalized music based on their emotional state. Developed as part of the **Cyberjam 2024 Hackathon**, Harmony Hub provides an engaging and interactive way to enhance users' music experience.
 
 ---
 

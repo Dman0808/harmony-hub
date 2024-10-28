@@ -71,6 +71,7 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 - **Form Validation**: Formik and Yup
 
 - **Backend**:
+
   - **Runtime**: Node.js
   - **Framework**: Express.js
   - **Database**: MongoDB
@@ -79,6 +80,57 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 
 - **On-chain Component**: Chainlink Functions
 - **Music AI**: Suno AI
+
+---
+
+## About Hackathon Cyber Jam 2024
+
+### What we’re about
+
+Cyberjam 2024 is an immersive hackathon taking place from October 19th to October 27th at Chicago's global innovation hub, 1871. Teams of 5 (we call them Jammers) will work together on phygital experiences combining art, technology, and innovation across five thematic tracks:
+
+- AI
+- Fashion
+- Governance
+- Sports/Gaming
+- Security & Privacy
+
+Each team will include:
+
+- A Software Engineer
+- A Hardware Engineer
+- A Visual Artist
+- A Musician
+- A Wildcard (a communicator to bring it all together)
+
+[HackQuest](https://www.hackquest.io/en/hackathon/explore/Cyberjam-2024)
+
+[Harmony Hub Team](https://www.hackquest.io/en/hackathon/projects/Cyberjam-2024-Harmony-Hub)
+
+---
+
+## Team
+
+- Alex Smagin - Software Engineer
+- Morgan - WildCard / Product Manager
+- Tony - Fashion / Designer
+- Xtinct - Music & Art Artist, Designer
+- Sheila - Mentor
+
+---
+
+## Screenshots
+
+### Working Process:
+
+![Styro Bob team](/public/images/team1.jpg) _Screenshot 1
+(Open Day Hackathon Cyber Jam 2024)_
+
+![Styro Bob team](/public/images/team2.jpg) _Screenshot 2
+(Open Day Hackathon Cyber Jam 2024)_
+
+![Styro Bob team](/public/images/team3.jpg) _Screenshot 3
+(Closing Day Hackathon Cyber Jam 2024)_
 
 ---
 

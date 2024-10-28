@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { primaryFont } from "@/components/fonts";
+import MusicBg from "@/assets/music.png";
 
 export const MusicHubWrapper = styled.div`
   display: flex;
@@ -9,11 +10,37 @@ export const MusicHubWrapper = styled.div`
   padding: 0 1.2rem;
 `;
 
+export const MusicHubEffectBg = styled.div`
+  position: absolute;
+  top: 10%;
+  right: 0;
+  background-image: url(${MusicBg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+
+  @media (min-width: 768px) {
+    top: -10%;
+    right: 0;
+    width: 12rem;
+    height: 12rem;
+  }
+  @media (min-width: 1440px) {
+    top: -40%;
+    right: unset;
+    left: -30%;
+    width: 16rem;
+    height: 16rem;
+  }
+`;
+
 export const MusicTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   width: 100%;
+  position: relative;
 
   @media (min-width: 768px) {
     width: unset;

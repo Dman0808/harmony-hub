@@ -16,6 +16,7 @@ import {
   RedirectButton,
   ResetButton,
   ButtonWrapper,
+  MusicHubEffectBg,
 } from "./MusicHub.styled";
 
 function Playlist() {
@@ -97,6 +98,7 @@ function Playlist() {
   return (
     <MusicHubWrapper>
       <MusicTextWrapper>
+        <MusicHubEffectBg />
         <MusicTitle>Hello, {user.name}!</MusicTitle>
 
         <MusicFormWrapper>

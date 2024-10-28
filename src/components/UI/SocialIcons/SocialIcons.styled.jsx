@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaGithub, FaYoutube } from "react-icons/fa6";
+import { FaLinkedinIn, FaGithub, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 export const SocialLinksWrapper = styled.div`
   display: flex;
@@ -23,7 +23,6 @@ export const GitHubIcon = styled(FaGithub)`
   font-size: 3.6rem;
   transition: all var(--primary-transition);
   padding: 0.6rem;
-  border-radius: 50%;
 
   &:hover,
   &:focus {
@@ -32,11 +31,34 @@ export const GitHubIcon = styled(FaGithub)`
 `;
 
 export const YouTubeIcon = styled(FaYoutube)`
-  color: #ff0000;
+  color: #cd201f;
   font-size: 3.6rem;
   transition: all var(--primary-transition);
   padding: 0.6rem;
-  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+`;
+
+export const LinkedInIcon = styled(FaLinkedinIn)`
+  color: #0a66c2;
+  font-size: 3.6rem;
+  transition: all var(--primary-transition);
+  padding: 0.6rem;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+`;
+
+export const TwitterIcon = styled(FaXTwitter)`
+  color: ${(p) => p.theme.colors.mainTextColor};
+  font-size: 3.6rem;
+  transition: all var(--primary-transition);
+  padding: 0.6rem;
 
   &:hover,
   &:focus {

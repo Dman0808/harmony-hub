@@ -1,3 +1,5 @@
+import SocialIcons from "../UI/SocialIcons/SocialIcons";
+import Year from "../UI/Year/Year";
 import {
   FooterContainer,
   FooterIcon,
@@ -9,12 +11,20 @@ import {
 function Footer() {
   return (
     <FooterContainer>
+      <SocialIcons />
       <FooterWrapper>
-        <FooterText>all rights reserved</FooterText>
+        <FooterText>
+          all rights reserved <Year />
+        </FooterText>
         <FooterIcon />
         <FooterText>
           created by{" "}
-          <FooterLink href="https://www.alexsmagin.dev" target="blank">
+          <FooterLink
+            href="https://www.alexsmagin.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Alex Smagin personal website"
+          >
             Alex Smagin
           </FooterLink>
         </FooterText>

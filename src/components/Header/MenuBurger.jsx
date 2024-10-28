@@ -17,6 +17,7 @@ import {
   CloseBurgerIcon,
   CloseBurgerWrapper,
 } from "./MenuBurger.styled";
+import Footer from "../Footer/Footer";
 
 // eslint-disable-next-line react/prop-types
 export default function MenuBurger() {
@@ -100,7 +101,7 @@ export default function MenuBurger() {
               animate={{ opacity: 1 }}
               transition={{ type: "spring", delay: 0.5 }}
             >
-              <SocialIcons />
+              <Footer />
             </motion.div>
           )}
         </BurgerLogoWrapper>

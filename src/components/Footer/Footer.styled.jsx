@@ -5,14 +5,16 @@ import { FaRegCopyright } from "react-icons/fa";
 export const FooterContainer = styled.footer`
   position: absolute;
   bottom: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 1.2rem;
+  right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
 
   @media (min-width: 768px) {
-    bottom: 1.2rem;
-    left: unset;
-    right: 1.2rem;
-    transform: unset;
+    flex-direction: row;
   }
 `;
 

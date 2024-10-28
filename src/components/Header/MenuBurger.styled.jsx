@@ -55,7 +55,6 @@ export const IconMenu = styled(TiThMenu)`
 
 export const CloseBurgerWrapper = styled.div`
   width: 100%;
-  max-width: 375px;
   position: absolute;
   margin: 0 auto;
   top: 3.4rem;

@@ -123,15 +123,35 @@ Each team will include:
 
 ## Screenshots
 
+### Harmony Hub App
+
+![Harmony Hub app](/public/images/screenshots/harmonyhub.jpg) _Screenshot 1
+(Harmony Hub Home Page)_
+
+![Harmony Hub app](/public/images/screenshots/harmonyhub2.jpg) _Screenshot 2
+(Harmony Hub About Page)_
+
+![Harmony Hub app](/public/images/screenshots/harmonyhub3.jpg) _Screenshot 3
+(Harmony Hub Sign Up Page)_
+
+![Harmony Hub app](/public/images/screenshots/harmonyhub4.jpg) _Screenshot 4
+(Harmony Hub Sign In Page)_
+
+![Harmony Hub app](/public/images/screenshots/harmonyhub5.jpg) _Screenshot 5
+(Harmony Hub Music Page)_
+
+![Harmony Hub app](/public/images/screenshots/harmonyhub6.jpg) _Screenshot 6
+(Harmony Hub Music Page Mobile Device)_
+
 ### Working Process:
 
-![Styro Bob team](/public/images/team1.jpg) _Screenshot 1
+![Styro Bob team](/public/images/screenshots/team1.jpg) _Screenshot 1
 (Open Day Hackathon Cyber Jam 2024)_
 
-![Styro Bob team](/public/images/team2.jpg) _Screenshot 2
+![Styro Bob team](/public/images/screenshots/team2.jpg) _Screenshot 2
 (Open Day Hackathon Cyber Jam 2024)_
 
-![Styro Bob team](/public/images/team3.jpg) _Screenshot 3
+![Styro Bob team](/public/images/screenshots/team3.jpg) _Screenshot 3
 (Closing Day Hackathon Cyber Jam 2024)_
 
 ---

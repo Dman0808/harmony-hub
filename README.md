@@ -40,6 +40,8 @@ Welcome to the frontend repository of **Harmony Hub**! This project delivers an 
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
+- [Team](#team)
+- [Screenshots](#screenshots)
 - [Issues](#issues)
 - [License](#license)
 - [Feedback](#feedback)
@@ -111,11 +113,11 @@ Each team will include:
 
 ## Team
 
-- Alex Smagin - Software Engineer
-- Morgan - WildCard / Product Manager
-- Tony - Fashion / Designer
-- Xtinct - Music & Art Artist, Designer
-- Sheila - Mentor
+- **Alex Smagin** - Software Engineer
+- **Morgan** - WildCard / Product Manager
+- **Tony** - Fashion / Designer
+- **Xtinct** - Music & Art Artist, Designer
+- **Sheila** - Mentor
 
 ---
 

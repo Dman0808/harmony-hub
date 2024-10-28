@@ -1,12 +1,24 @@
-import { FooterContainer } from "./Footer.styled";
-import { FaRegCopyright } from "react-icons/fa";
+import {
+  FooterContainer,
+  FooterIcon,
+  FooterLink,
+  FooterText,
+  FooterWrapper,
+} from "./Footer.styled";
 
 function Footer() {
   return (
     <FooterContainer>
-      <p>all rights reserved</p>
-      <FaRegCopyright />
-      <p>created by</p> <a>Alex Smagin</a>
+      <FooterWrapper>
+        <FooterText>all rights reserved</FooterText>
+        <FooterIcon />
+        <FooterText>
+          created by{" "}
+          <FooterLink href="https://www.alexsmagin.dev" target="blank">
+            Alex Smagin
+          </FooterLink>
+        </FooterText>
+      </FooterWrapper>
     </FooterContainer>
   );
 }

@@ -1,11 +1,53 @@
 import styled from "styled-components";
+import { primaryFont } from "../fonts";
+import { FaRegCopyright } from "react-icons/fa";
 
 export const FooterContainer = styled.footer`
   position: absolute;
-  bottom: 2.4rem;
-  right: 2.4rem;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
 
+  @media (min-width: 768px) {
+    bottom: 1.2rem;
+    left: unset;
+    right: 1.2rem;
+    transform: unset;
+  }
+`;
+
+export const FooterWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
+  flex-wrap: wrap;
+`;
+
+export const FooterText = styled.p`
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: ${({ theme }) => theme.colors.headerTextColor};
+  white-space: nowrap;
+`;
+
+export const FooterIcon = styled(FaRegCopyright)`
+  font-size: 1.4rem;
+  color: ${({ theme }) => theme.colors.headerTextColor};
+`;
+
+export const FooterLink = styled.a`
+  color: ${({ theme }) => theme.colors.mainTextColor};
+  text-decoration: none;
+  font-weight: 700;
+  transition: color var(--primary-transition);
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.mainTextColor};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.accentColor};
+    border-bottom-color: ${({ theme }) => theme.colors.accentColor};
+  }
 `;

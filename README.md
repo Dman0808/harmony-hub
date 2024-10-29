@@ -1,4 +1,4 @@
-# Harmony Hub Frontend
+# Harmony Hub
 
 <img align="right" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="100"/>
 
@@ -150,6 +150,9 @@ Each team will include:
 
 ![Styro Bob team](/public/images/screenshots/team2.jpg) _Screenshot 2
 (Open Day Hackathon Cyber Jam 2024)_
+
+![Styro Bob team](/public/images/screenshots/team4.jpg) _Screenshot 2
+(Coding Time)_
 
 ![Styro Bob team](/public/images/screenshots/team3.jpg) _Screenshot 3
 (Closing Day Hackathon Cyber Jam 2024)_

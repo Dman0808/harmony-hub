@@ -19,16 +19,20 @@ export const RouterConfig = () =>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route
-        path="music-hub"
-        element={<PrivateRoute redirectTo="/signup" component={<MusicHub />} />}
+        path="/music-hub"
+        element={<PrivateRoute redirectTo="/signin" component={<MusicHub />} />}
       />
       <Route
-        path="signin"
-        element={<RestrictedRoute redirectTo="/" component={<SignIn />} />}
+        path="/signin"
+        element={
+          <RestrictedRoute redirectTo="/music-hub" component={<SignIn />} />
+        }
       />
       <Route
-        path="signup"
-        element={<RestrictedRoute redirectTo="/" component={<SignUp />} />}
+        path="/signup"
+        element={
+          <RestrictedRoute redirectTo="/music-hub" component={<SignUp />} />
+        }
       />
       <Route path="privacy" element={<Privacy />} />
       <Route path="terms" element={<Terms />} />

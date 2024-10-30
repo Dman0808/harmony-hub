@@ -147,27 +147,33 @@ export default function SignUp() {
                 }}
               >
                 <SignUpTextField>
-                  <TextFieldSignUpStyled
-                    autoComplete="given-name"
-                    name="name"
-                    required
-                    fullWidth
-                    id="name"
-                    placeholder="Enter your name"
-                    autoFocus
-                    error={errors.name ? true : false}
-                  />
-                  {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>}
-                  <TextFieldSignUpStyled
-                    required
-                    fullWidth
-                    id="email"
-                    placeholder="Enter your email"
-                    name="email"
-                    autoComplete="email"
-                    error={errors.email ? true : false}
-                  />
-                  {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
+                  <EyePasswordSignUpWrap>
+                    <TextFieldSignUpStyled
+                      autoComplete="given-name"
+                      name="name"
+                      required
+                      fullWidth
+                      id="name"
+                      placeholder="Enter your name"
+                      autoFocus
+                      error={errors.name ? true : false}
+                    />
+                    {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>}
+                  </EyePasswordSignUpWrap>
+                  <EyePasswordSignUpWrap>
+                    <TextFieldSignUpStyled
+                      required
+                      fullWidth
+                      id="email"
+                      placeholder="Enter your email"
+                      name="email"
+                      autoComplete="email"
+                      error={errors.email ? true : false}
+                    />
+                    {errors.email && (
+                      <ErrorMessage>{errors.email}</ErrorMessage>
+                    )}
+                  </EyePasswordSignUpWrap>
                 </SignUpTextField>
                 <EyePasswordSignUpWrap>
                   <TextFieldSignUpStyled

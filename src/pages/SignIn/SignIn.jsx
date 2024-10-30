@@ -134,20 +134,22 @@ export default function SignIn() {
                   width: { sm: "376px", xs: "312px" },
                 }}
               >
-                <TextFieldStyled
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="email"
-                  placeholder="Enter your email"
-                  name="email"
-                  autoComplete="email"
-                  autoFocus
-                  error={errors.email ? true : false}
-                />
-                {errors.email && (
-                  <SignInErrorMessage>{errors.email}</SignInErrorMessage>
-                )}
+                <EyePasswordWrap>
+                  <TextFieldStyled
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    placeholder="Enter your email"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
+                    error={errors.email ? true : false}
+                  />
+                  {errors.email && (
+                    <SignInErrorMessage>{errors.email}</SignInErrorMessage>
+                  )}
+                </EyePasswordWrap>
 
                 <EyePasswordWrap>
                   <TextFieldStyled

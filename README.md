@@ -143,6 +143,9 @@ Each team will include:
 ![Harmony Hub app](/public/images/screenshots/harmonyhub6.jpg) _Screenshot 6
 (Harmony Hub Music Page Mobile Device)_
 
+![Harmony Hub app](/public/images/screenshots/404.jpg) _Screenshot 7
+(Harmony Hub 404 Page Not Found)_
+
 ### Working Process:
 
 ![Styro Bob team](/public/images/screenshots/team1.jpg) _Screenshot 1
@@ -151,10 +154,10 @@ Each team will include:
 ![Styro Bob team](/public/images/screenshots/team2.jpg) _Screenshot 2
 (Open Day Hackathon Cyber Jam 2024)_
 
-![Styro Bob team](/public/images/screenshots/team4.jpg) _Screenshot 2
+![Styro Bob team](/public/images/screenshots/team4.jpg) _Screenshot 3
 (Coding Time)_
 
-![Styro Bob team](/public/images/screenshots/team3.jpg) _Screenshot 3
+![Styro Bob team](/public/images/screenshots/team3.jpg) _Screenshot 4
 (Closing Day Hackathon Cyber Jam 2024)_
 
 ---
